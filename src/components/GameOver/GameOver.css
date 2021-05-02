@@ -1,0 +1,84 @@
+.game-over{
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.4);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.game-over__body{
+    border-radius: 10px;
+    background: white;
+    height:40%;
+    padding: 20px;
+    width: 35%;
+}
+
+.game-over__body__score{
+    text-align: center;
+    margin-top: 15%;
+    font-size: 3em;
+}
+
+.game-over__body__score > span:first-child{
+    color: rgb(52, 100, 139);
+}
+
+
+.game-over__body__score > span:nth-child(2){
+    color: rgb(37, 151, 62);
+}
+
+
+.header{
+    font-size: 2em;
+    text-align: center;
+    color:rgb(219, 95, 95);
+    font-weight: bold;
+}
+
+.buttons{
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.game-over button:disabled {
+    cursor: not-allowed;
+    pointer-events: all !important;
+  }
+  
+.game-over button{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: none;
+    font-size: 1.2em;
+    border-radius: 10px;
+    color:white;
+    cursor: pointer;
+    width: 150px;
+}
+
+.game-over button:focus{
+    outline: none;
+}
+
+.play-again{
+    background: rgb(101, 173, 101);
+}
+
+.exit{
+    background: rgb(250, 96, 96);
+}
+
+.save-score{
+    background: rgb(107, 104, 104);
+}

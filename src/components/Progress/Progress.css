@@ -1,0 +1,103 @@
+.progress{
+    display: flex;
+    height: 20vh;
+    width: 100%;
+    margin:auto;
+    position: relative;
+    width: 60%;
+    justify-content:space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.level{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    background: #51b2da;
+    color:white;
+    height: 80px;
+    width:200px;
+    font-weight: bold;
+    border-radius: 500px;
+}
+
+.level > div:first-child{
+    font-size: 30px;
+}
+.score > div:first-child{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+.multiplier {
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    background:#8061d8 ;
+    height: 100px;
+    width: 200px;
+    color: white;
+}
+
+.level{
+    box-shadow: 0px 3px 5px rgb(124, 118, 118);
+}
+
+.score-wrap,.multiplier-wrap{
+    /* content: ""; */
+    /* display: flex; */
+    /* position: absolute; */
+    position: relative;
+    filter: drop-shadow(0px 3px 3px rgb(124, 118, 118));
+}
+
+.wpm{
+    position: absolute;
+    font-weight: bold;
+    padding: 1rem;
+    background: #e8e8e8;
+    border-radius: 10px;
+    font-size:1.5rem;
+    right: 25%;
+}
+
+.score{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+    background: #8abe5e;
+    height: 80px;
+    color:white;
+    width: 200px;
+}
+
+.wpm-enter{
+    opacity: 0;
+}
+
+.wpm-enter-active{
+    opacity:1;
+    transition: opacity 1s;
+}
+
+/* .wpm-enter-done{
+    opacity: 1;
+} */
+
+.wpm-exit{
+    opacity: 1;
+}
+
+.wpm-exit-active{
+    opacity: 0;
+    transition: opacity 1s;
+}

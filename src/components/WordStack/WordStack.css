@@ -1,0 +1,52 @@
+.word-stack{
+    width: 250px;
+    margin: auto;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 1.5em;
+    color: rgb(44, 42, 42);
+    border-right: 3px solid black;
+    font-weight: bold;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+
+}
+
+.word{
+    padding:10px;
+    background: #e8e8e8;
+    text-align: center;
+    margin-top: 8px;
+    border-radius:10px ;
+
+}
+
+
+.word-enter{
+    transform: translateY(-100px);
+}
+
+.word-enter-active{
+    transform:translateY(0);
+    transition: all .5s;
+}
+
+.word-enter-done{
+    transform: translateY(0);
+}
+
+.word-exit{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.word-exit-active{
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: all .5s;
+}

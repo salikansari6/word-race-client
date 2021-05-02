@@ -1,0 +1,52 @@
+.sign-up{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    border-radius: 10px;
+    color:white;
+    font-size: 1.2em;
+    height: 50%;
+    padding: 1em 2em 1em 2em;
+    width: 25%;
+    background: rgb(56, 54, 54);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+input{
+    height: 40px;
+    border-radius:10px;
+    padding: 10px;
+    font-size: 1.1em;
+    border: none;
+}
+
+button{
+    align-self: center;
+    color:rgb(56, 54, 54);
+    margin-top: 10px;
+    font-weight: bold;
+
+}
+
+.errors,.user-created-success{
+    margin-top: .5em;
+    border: 2px solid rgb(235, 88, 88) ;
+    padding: 0 .5em 0 .5em;
+    font-size: 1.5em;
+    color:rgb(235, 88, 88);
+    font-weight: bold;
+}
+
+.user-created-success{
+    border: 2px solid rgb(27, 119, 88) ;
+    color:rgb(27, 119, 88);
+
+}

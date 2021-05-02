@@ -1,0 +1,22 @@
+.user-stats{
+    display: flex;
+    margin-top: 10%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-stats__body{
+    padding:2rem;
+    background:rgb(137, 143, 57) ;
+    font-size: 2rem;
+    box-shadow: -2px 2px 5px 2px rgb(122, 122, 111);
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+
+.user-stats__body p:nth-child(n):not(:nth-child(1)){
+    margin-top: 2rem;
+}
