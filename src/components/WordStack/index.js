@@ -31,8 +31,6 @@ const WordStack = ({input,setInput,setScore,setLevel,setMultiplier,multiplier,se
         return(() =>{
             clearInterval(addWordsInterval)
         }) 
-
-
     },[wordStack,setShowGameOver,setWordStack,speed])
 
     
@@ -42,6 +40,9 @@ const WordStack = ({input,setInput,setScore,setLevel,setMultiplier,multiplier,se
                 setSpeed(prev => {
                     if(prev !== 1500){
                         return prev - 100
+                    }
+                    else{
+                        return prev
                     }
                 })
                 setLevel(level => level+1)
