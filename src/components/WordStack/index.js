@@ -38,13 +38,14 @@ const WordStack = ({input,setInput,setScore,setLevel,setMultiplier,multiplier,se
     
 
     React.useEffect(() =>{
-        if(speed!==1500){
-            if(consecutiveCorrect!==0 && consecutiveCorrect % 3 === 0){
-                setSpeed(prev => prev - 100)
+            if(consecutiveCorrect !==0 && consecutiveCorrect % 3 === 0){
+                setSpeed(prev => {
+                    if(prev !== 1500){
+                        return prev - 100
+                    }
+                })
                 setLevel(level => level+1)
-            }
-        }
-   // eslint-disable-next-line
+            }        
 },[consecutiveCorrect,setLevel,setSpeed])
 
     React.useEffect(() =>{

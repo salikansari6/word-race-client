@@ -9,7 +9,6 @@ const Leaderboard = () => {
         fetch('https://word-race-backend.herokuapp.com/api/stats')
         .then(res =>res.json())
         .then(data => {
-            console.log(data)
             setStats(data)
         }) 
     },[])
@@ -18,10 +17,15 @@ const Leaderboard = () => {
         <div className='leaderboard'>
             <h1>Leaderboard</h1>
             <table className="leaderboard__table">
-                <th>Sr. no</th>
-                <th>User</th>
-                <th>Score</th>
-                <th>Max Level</th>
+                <thead>
+                    <tr>
+                        <th>Sr. no</th>
+                        <th>User</th>
+                        <th>Score</th>
+                        <th>Max Level</th>
+                    </tr>
+                </thead>
+                <tbody>
                 {
                     stats?.map(((stat,index) =>{
                         return (
@@ -34,13 +38,7 @@ const Leaderboard = () => {
                         )
                     }))
                 }
-                {/* <tr>
-                    
-                    <td></td>
-                    <td>dummy user</td>
-                    <td>dummy score</td>
-                    <td>dummy level</td>
-                </tr> */}
+                </tbody>  
             </table>
         </div>
     )

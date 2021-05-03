@@ -28,10 +28,15 @@ input{
     border: none;
 }
 
-button{
+.log-in button{
     align-self: center;
     color:rgb(56, 54, 54);
+    padding: 0.5rem 1rem 0.5rem 1rem ;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
     margin-top: 10px;
+    border: none;
     font-weight: bold;
 
 }

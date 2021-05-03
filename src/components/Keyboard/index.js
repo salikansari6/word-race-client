@@ -41,7 +41,7 @@ const Keyboard = ({input,setInput,showGameOver}) => {
                 />
             <div className="keyboard-wrapper">
                 <div className="first-row">{"qwertyuiop".split("").map((letter,index) =>{
-                    return <div className="key" 
+                    return <div className="key" key={letter}
                     style={{
                         backgroundColor:activeKey === letter ? "#fed34e": null,
                         transform : activeKey === letter ? 'scale(1.2)' : null
@@ -49,14 +49,14 @@ const Keyboard = ({input,setInput,showGameOver}) => {
                 })}
                 </div>
                 <div className="second-row">{"asdfghjkl".split("").map((letter,index) =>{
-                    return <div className="key" 
+                    return <div className="key" key={letter}
                     style={{
                         backgroundColor:activeKey === letter ? "#fed34e": null,
                         transform : activeKey === letter ? 'scale(1.2)' : null
                     }}>{letter}</div>
                 })}</div>
                 <div className="third-row">{"zxcvbnm".split("").map((letter,index) =>{
-                    return <div className="key" 
+                    return <div className="key" key={letter}
                     style={{
                         backgroundColor:activeKey === letter ? "#fed34e": null,
                         transform : activeKey === letter ? 'scale(1.2)' : null
