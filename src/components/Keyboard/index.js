@@ -43,6 +43,9 @@ const Keyboard = ({input,setInput,showGameOver}) => {
             <input type="text" value={input}
                 autoCapitalize="none"
                 className="keyboard-input" 
+                autocomplete="off" 
+                spellcheck="false" 
+                autocorrect="off"
                 onChange={handleChange} 
                 placeholder="Type here..."
                 disabled={showGameOver}
