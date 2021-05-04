@@ -69,19 +69,18 @@ input{
 
 @media (max-width:991px){
     form{
+        height: 512px;
         width: 60%;
     }
 }
 
-@media (max-width: 767.98px) { 
+@media (max-width: 750px) { 
     .sign-up{
-        display: flex;
         display: block;
     }
     form{
         margin: 50px auto;
         font-size: .8em;
-        width: 80%;
-        height: 55%;
+        height: 400px;
     }
  }
