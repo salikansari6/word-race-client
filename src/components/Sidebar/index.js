@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react'
 import {Link,useHistory} from 'react-router-dom'
 import './Sidebar.css'
 import Logo from '../../assets/icons/Logo'
-const Sidebar = ({isAuth,setIsAuth}) => {
+const Sidebar = ({isAuth,setIsAuth,...props}) => {
     const [user,setUser] = useState('')
     const history = useHistory()
     const logOut = e =>{
@@ -28,7 +28,7 @@ const Sidebar = ({isAuth,setIsAuth}) => {
 
 
     return (
-        <div className="sidebar">
+        <div className={`sidebar ${props.className}`}>
             <Logo/>
             <h1 className="word-race">WORD RACE</h1>
             {user && isAuth && <div className="user">Welcome {user.name}</div>}

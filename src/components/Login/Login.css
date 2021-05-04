@@ -49,3 +49,18 @@ input{
     color:rgb(235, 88, 88);
     font-weight: bold;
 }
+
+
+@media (max-width: 1119.98px) {
+    .log-in{
+        display: flex;
+        display: block;
+    }
+    .log-in form{
+        margin: 50px auto;
+        font-size: .8em;
+        width: 80%;
+        height: 40%;
+    }
+    
+    }

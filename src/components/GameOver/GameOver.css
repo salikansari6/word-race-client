@@ -82,3 +82,50 @@
 .save-score{
     background: rgb(107, 104, 104);
 }
+
+
+@media (max-width:1200px)
+{
+    .game-over__body{
+        width: 50%;
+    }
+}
+
+
+@media (max-width:991px){
+    .game-over__body{
+        width: 60%;
+    }
+}
+
+@media (max-width: 767.98px) { 
+    
+    .game-over__body{
+        width: 80%;
+        height: auto;
+    }
+
+    .game-over button{
+        margin-top: 5px;
+    }
+
+    .game-over button{
+        height: 30px;
+        width: 100%;
+        font-size: .8rem;
+    }
+
+   .game-over__body__score {
+       margin-top: 5%;
+
+   } 
+    
+   .buttons{
+       flex-direction: column;
+   }
+
+    .game-over__body__score span{
+        font-size: 25px;
+    }
+
+ }

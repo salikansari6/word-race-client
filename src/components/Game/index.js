@@ -1,20 +1,21 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Keyboard from '../Keyboard'
 import WordStack from '../WordStack'
 import Progress from '../Progress';
 import GameOver from '../GameOver';
 
 const Game = ({isAuth}) => {
-    const [input,setInput] = React.useState("")
-    const [score,setScore] = React.useState(0)
-    const [level,setLevel] = React.useState(1)
-    const [multiplier,setMultiplier] = React.useState(1)
-    const [showGameOver,setShowGameOver] = React.useState(false)
-    const [WPM,setWPM] = React.useState("")
-    const [wordStack,setWordStack] = React.useState([])
-    const [speed,setSpeed] = React.useState(3000)
+    const [input,setInput] = useState("")
+    const [score,setScore] = useState(0)
+    
+    const [level,setLevel] = useState(1)
+    const [multiplier,setMultiplier] = useState(1)
+    const [showGameOver,setShowGameOver] = useState(false)
+    const [WPM,setWPM] = useState("")
+    const [wordStack,setWordStack] = useState([])
+    const [speed,setSpeed] = useState(3000)
 
-
+    
 
     return(
         <div className="App">

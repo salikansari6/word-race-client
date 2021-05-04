@@ -1,16 +1,37 @@
 .sidebar{
     width:15%;
+    /* min-height: 100vh; */
     height: 100vh;
-    position: fixed;
+    max-height: 100vh;
+     position: fixed;
     right: 0;
-    top:0;
+    top:0; 
     background: rgb(56, 54, 54);
     align-items: center;
     color:white;
     display: flex;
     flex-direction: column;
     box-shadow: -2px 0px 7px 2px rgb(146, 142, 142);
+    transition: max-height .3s ease-in-out;
 }
+
+.menu-button{
+    display: none;
+    
+
+}
+
+
+
+.hide-menu{
+    /* display: none; */
+    max-height: 0px;
+}
+
+.mobile-nav{
+    display:none
+}
+
 
 svg{
     margin: 0 auto;
@@ -75,5 +96,102 @@ li a:hover{
     font-weight: bold;
     font-size: 2em;
     margin-top: .5em;
+
+}
+
+
+@media (max-width: 1119.98px) { 
+    .menu-button{
+        background: none;
+        border: 1px solid white;
+        padding: 5px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        height: 40px;
+        justify-content: space-around;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    .word-race{
+        display: none;
+    }
+
+    .sidebar-list{
+        margin-top: 10px;
+    }
+
+    .sidebar-list li{
+        border-bottom: 1px solid rgb(102, 98, 98);
+    }
+
+    .sidebar svg{
+        display: none;
+    }
+
+    .menu-button.open span:last-child{
+            display: none;
+    }
+    .menu-button.open span:first-child{
+        transform:rotateZ(45deg) translateY(-8px);
+        transition: transform .5s;
+        transform-origin:left;
+    }
+    .menu-button.open span:nth-child(2){
+        transform:rotateZ(-45deg) translateY(8px);
+        transition: transform .5s;
+        transform-origin: left;
+    }
+
+    .menu-button span:first-child{
+        transform:rotateZ(0) translateY(0);
+        transition: transform .5s;
+        transform-origin:left;
+    }
+    .menu-button span:nth-child(2){
+        transform:rotateZ(0) translateY(0);
+        transition: transform .5s;
+        transform-origin: left;
+    }
+
+
+
+
+    .mobile-nav{
+        display:flex;
+        width: 100%;
+        align-items: center;
+        background: rgb(56, 54, 54);
+        height:60px
+    }
+
+    .mobile-nav svg{
+        height: 40px;
+        margin: 0;
+        margin-left: auto;
+        /* margin-right: auto; */
+    }
+
+    .menu-button span{
+        width: 35px;
+        background: white;
+        display: block;
+        height: 3px;
+    }
+    .sidebar{
+        position: relative;
+        height: 50%;
+        width:100%;
+        right:0;
+        overflow: hidden;
+        top:0;
+        background: rgb(56, 54, 54);
+        align-items: center;
+        color:white;
+        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+        box-shadow: none;
+    }
 
 }

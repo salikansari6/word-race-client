@@ -29,3 +29,11 @@ td, th {
 	text-align: center; 
 	font-size: 18px;
 	}
+
+
+@media (max-width: 1119.98px) {
+	table{
+		width: 80%;
+	}
+	
+}

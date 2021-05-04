@@ -56,3 +56,32 @@ input{
     color:rgb(27, 119, 88);
 
 }
+
+
+
+@media (max-width:1200px)
+{
+    form{
+        width: 50%;
+    }
+}
+
+
+@media (max-width:991px){
+    form{
+        width: 60%;
+    }
+}
+
+@media (max-width: 767.98px) { 
+    .sign-up{
+        display: flex;
+        display: block;
+    }
+    form{
+        margin: 50px auto;
+        font-size: .8em;
+        width: 80%;
+        height: 55%;
+    }
+ }

@@ -1,12 +1,22 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import "./Keyboard.css"
 import {sound} from '../../assets/sounds'
 
 
 
 const Keyboard = ({input,setInput,showGameOver}) => {
-    const [activeKey,setActiveKey] = React.useState("")
+    const [activeKey,setActiveKey] = useState("")
     const inputRef = React.useRef()
+    const [showKeyboard,setShowKeyboard] = useState(false)
+    
+    const screenWidth = window.innerWidth
+
+    useEffect(() =>{
+            if(screenWidth > 800){
+                setShowKeyboard(true)
+            }
+        },[screenWidth])
+
 
     const handleChange = e =>{
         if(e.key === " "){
@@ -31,6 +41,7 @@ const Keyboard = ({input,setInput,showGameOver}) => {
     return (
         <div className="keyboard">
             <input type="text" value={input}
+                autoCapitalize="none"
                 className="keyboard-input" 
                 onChange={handleChange} 
                 placeholder="Type here..."
@@ -39,7 +50,8 @@ const Keyboard = ({input,setInput,showGameOver}) => {
                 onKeyDown={handleKeyDown}
                 onKeyUp={handleKeyUp}
                 />
-            <div className="keyboard-wrapper">
+            {
+                showKeyboard &&  <div className="keyboard-wrapper">
                 <div className="first-row">{"qwertyuiop".split("").map((letter,index) =>{
                     return <div className="key" key={letter}
                     style={{
@@ -63,6 +75,8 @@ const Keyboard = ({input,setInput,showGameOver}) => {
                     }}>{letter}</div>
                 })}</div>
             </div>
+            }
+           
         </div>
     )
 }

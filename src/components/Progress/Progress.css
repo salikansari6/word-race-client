@@ -101,3 +101,34 @@
     opacity: 0;
     transition: opacity 1s;
 }
+
+@media (max-width: 1119.98px) {
+    .score{
+        height: 60px;
+        width: 100px;
+        font-size: 1em;
+    }
+    .score > div:first-child{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .level{
+        height: 60px;
+        width: 100px;
+    }
+
+    .multiplier{
+        height: 60px;
+        width: 100px;
+    }
+
+    .progress{
+        justify-content: space-around;
+        width: 100%;
+    }
+    .level > div:first-child{
+        font-size: 1rem;
+    }
+    
+    }

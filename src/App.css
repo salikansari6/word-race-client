@@ -3,7 +3,7 @@
 .App{
    font-family: 'Dosis', sans-serif;
    position: relative;
-   width: 95%;
+   width: 100%;
 }
 
 *{
@@ -17,3 +17,11 @@ html, body{
     width: 100%;
     position: relative;
 }
+
+
+
+@media (max-width: 1119.98px) { 
+    *{
+        font-size: 20px;
+    }
+ }
