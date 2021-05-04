@@ -31,7 +31,7 @@ const App = () =>{
 
 
     return (
-       <div className="App">
+       <div className="App" id="App">
         <Router>
                 <div className='mobile-nav'>
                     <button className={`menu-button ${showMenu ? 'open' : ''}`} onClick={handleClick}>
