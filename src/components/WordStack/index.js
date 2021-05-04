@@ -18,9 +18,9 @@ const WordStack = ({input,setInput,setScore,setLevel,setMultiplier,multiplier,se
             loopingWordList = [...wordList]
         }
 
-        // addWordsInterval = setInterval(() =>{
-        //     setWordStack((wordStack) => [loopingWordList.pop(),...wordStack])
-        // },speed)
+         addWordsInterval = setInterval(() =>{
+            setWordStack((wordStack) => [loopingWordList.pop(),...wordStack])
+         },speed)
         
 
         if(wordStack.length === STACK_LENGTH){
