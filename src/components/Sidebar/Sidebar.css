@@ -12,21 +12,15 @@
     display: flex;
     flex-direction: column;
     box-shadow: -2px 0px 7px 2px rgb(146, 142, 142);
-    transition: max-height .3s ease-in-out;
 }
 
 .menu-button{
     display: none;
     
-
+    
 }
 
 
-
-.hide-menu{
-    /* display: none; */
-    max-height: 0px;
-}
 
 .mobile-nav{
     display:none
@@ -48,8 +42,20 @@ svg{
     list-style-type: none;
     font-size: 2em;
     font-weight: bold;
-     margin-top: 1em;
-     width: 100%;
+    margin-top: 1em;
+    width: 100%;
+}
+
+
+.list-wrapper{
+    max-height: 1000px;
+    transition: max-height .3s ease-in-out;
+    width: 100%;
+
+}
+
+.hide-menu{
+    max-height: 0px;
 }
 
 ul li{
@@ -100,6 +106,8 @@ li a:hover{
 }
 
 
+
+
 @media (max-width: 1119.98px) { 
     .menu-button{
         background: none;
@@ -125,9 +133,7 @@ li a:hover{
         border-bottom: 1px solid rgb(102, 98, 98);
     }
 
-    .sidebar svg{
-        display: none;
-    }
+    
 
     .menu-button.open span:last-child{
             display: none;
@@ -193,5 +199,10 @@ li a:hover{
         flex-direction: column;
         box-shadow: none;
     }
+
+    .sidebar > svg{
+        display: none;
+    }
+   
 
 }

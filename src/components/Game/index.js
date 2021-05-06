@@ -7,15 +7,12 @@ import GameOver from '../GameOver';
 const Game = ({isAuth}) => {
     const [input,setInput] = useState("")
     const [score,setScore] = useState(0)
-    
     const [level,setLevel] = useState(1)
     const [multiplier,setMultiplier] = useState(1)
     const [showGameOver,setShowGameOver] = useState(false)
     const [WPM,setWPM] = useState("")
     const [wordStack,setWordStack] = useState([])
     const [speed,setSpeed] = useState(3000)
-
-    
 
     return(
         <div className="App">
@@ -37,12 +34,13 @@ const Game = ({isAuth}) => {
             <Keyboard input={input} setInput={setInput} showGameOver={showGameOver}/>
             {
                 showGameOver && <GameOver 
-                                    isAuth={isAuth}
+                                    
                                     setShowGameOver={setShowGameOver}
                                     setMultiplier={setMultiplier}
                                     setScore={setScore}
                                     score={score}
                                     setLevel={setLevel}
+                                    isAuth={isAuth}
                                     level={level}
                                     setSpeed={setSpeed}
                                     setWordStack={setWordStack}
@@ -52,4 +50,4 @@ const Game = ({isAuth}) => {
     )
 }
 
-export default Game
+export default React.memo(Game)
