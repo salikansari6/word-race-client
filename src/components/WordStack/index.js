@@ -34,6 +34,15 @@ const WordStack = ({input,setInput,setScore,setLevel,setMultiplier,multiplier,se
     },[wordStack,setShowGameOver,setWordStack,speed])
 
     
+    React.useEffect(() =>{
+
+        if(wordStack.length === 0){
+            setWordStack((wordStack) => [loopingWordList.pop()])
+
+        }
+
+    },[wordStack,setWordStack])
+
 
     React.useEffect(() =>{
             if(consecutiveCorrect !==0 && consecutiveCorrect % 3 === 0){
