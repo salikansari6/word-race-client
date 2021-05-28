@@ -12,7 +12,7 @@ const Login = ({setIsAuth,isAuth}) => {
     
     const handleSubmit = e =>{
         e.preventDefault()
-        fetch('https://word-race-backend.herokuapp.com//api/user/login',{
+        fetch('https://word-race-backend.herokuapp.com/api/user/login',{
             method:"POST",
             body:JSON.stringify({
                 email:form.email,

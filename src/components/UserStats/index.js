@@ -9,14 +9,14 @@ const UserStats = ({isAuth}) => {
     const { id } = useParams()
     useEffect(() =>{
         if(id){
-            fetch(`https://word-race-backend.herokuapp.com//api/stats/${id}`)
+            fetch(`https://word-race-backend.herokuapp.com/api/stats/${id}`)
             .then(res => res.json())
             .then(data =>{
                 setUserStats(data)
             })
         }
         else{
-            fetch(`https://word-race-backend.herokuapp.com//api/stats/${localStorage.getItem('userId')}`)
+            fetch(`https://word-race-backend.herokuapp.com/api/stats/${localStorage.getItem('userId')}`)
             .then(res => res.json())
             .then(data =>{
               if(data.noOfGamesPlayed === 0){

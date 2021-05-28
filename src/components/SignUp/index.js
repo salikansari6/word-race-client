@@ -27,7 +27,7 @@ const SignUp = () => {
 
     const handleSubmit = e =>{
         e.preventDefault()
-        fetch('https://word-race-backend.herokuapp.com//api/user/register',{
+        fetch('https://word-race-backend.herokuapp.com/api/user/register',{
             method:"POST",
             body:JSON.stringify({
                 name:form.name,

@@ -23,7 +23,7 @@ const Sidebar = ({isAuth,setIsAuth,...props}) => {
 
     useEffect(() =>{
         if(isAuth){            
-            fetch('https://word-race-backend.herokuapp.com//api/user',{
+            fetch('https://word-race-backend.herokuapp.com/api/user',{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json",

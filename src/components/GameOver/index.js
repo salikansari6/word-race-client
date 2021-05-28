@@ -18,7 +18,7 @@ const GameOver = ({setLevel,setMultiplier,setScore,setShowGameOver,setWordStack,
 
     const saveScore = () =>{
         setLoading(true)
-        fetch('https://word-race-backend.herokuapp.com//api/stats',{
+        fetch('https://word-race-backend.herokuapp.com/api/stats',{
             method:"POST",
             body:JSON.stringify({
                 score,level
