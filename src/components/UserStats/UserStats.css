@@ -1,12 +1,19 @@
 .user-stats{
     display: flex;
-    margin-top: 10%;
+    /* margin-top: 10%; */
+    height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .user-stats__body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 30%;
     padding:2rem;
     background:rgb(137, 143, 57) ;
     font-size: 2rem;
