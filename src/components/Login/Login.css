@@ -1,66 +1,63 @@
-.log-in{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.log-in {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.log-in form{
-    border-radius: 10px;
-    color:white;
-    font-size: 1.2em;
-    height: 30%;
-    padding: 1em 2em 1em 2em;
-    width: 25%;
-    background: rgb(56, 54, 54);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.log-in form {
+  border-radius: 10px;
+  color: white;
+  font-size: 1.2em;
+  min-height: 35%;
+  height: auto;
+  padding: 1em 2em 1em 2em;
+  width: 25%;
+  background: rgb(56, 54, 54);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-
-input{
-    height: 40px;
-    border-radius:10px;
-    padding: 10px;
-    font-size: 1.1em;
-    border: none;
+input {
+  height: 40px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.1em;
+  border: none;
 }
 
-.log-in button{
-    align-self: center;
-    color:rgb(56, 54, 54);
-    padding: 0.5rem 1rem 0.5rem 1rem ;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin-top: 10px;
-    border: none;
-    font-weight: bold;
-
+.log-in button {
+  align-self: center;
+  color: rgb(56, 54, 54);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: 10px;
+  border: none;
+  font-weight: bold;
 }
 
-.errors{
-    margin-top: .5em;
-    border: 2px solid rgb(235, 88, 88) ;
-    padding: 0 .5em 0 .5em;
-    font-size: 1.5em;
-    color:rgb(235, 88, 88);
-    font-weight: bold;
+.errors {
+  margin-top: 0.5em;
+  border: 2px solid rgb(235, 88, 88);
+  padding: 0 0.5em 0 0.5em;
+  font-size: 1.5em;
+  color: rgb(235, 88, 88);
+  font-weight: bold;
 }
-
 
 @media (max-width: 1119.98px) {
-    .log-in{
-        display: flex;
-        display: block;
-    }
-    .log-in form{
-        margin: 50px auto;
-        font-size: .8em;
-        width: 80%;
-        height: 40%;
-    }
-    
-    }
+  .log-in {
+    display: flex;
+    display: block;
+  }
+  .log-in form {
+    margin: 50px auto;
+    font-size: 0.8em;
+    width: 80%;
+    height: 40%;
+  }
+}
