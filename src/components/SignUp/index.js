@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Preloader } from "react-preloader-tmnt";
+import { PreloadMessage } from "react-preloader-tmnt";
 import "./SignUp.css";
 
 const SignUp = () => {
@@ -47,9 +47,10 @@ const SignUp = () => {
       .then((res) => {
         if (res.ok) {
           return res.json();
-        } else {
-          throw res.json();
         }
+        return res.json().then((data) => {
+          throw new Error(data.message || "Something went wrong");
+        });
       })
       .then((userId) => {
         setLoading(false);
@@ -58,8 +59,8 @@ const SignUp = () => {
         setForm({ name: "", email: "", password: "", confirmPassword: "" });
       })
       .catch((err) => {
+        setErrors(err.message);
         setLoading(false);
-        err.then((err) => setErrors(err.message));
       });
   };
 
@@ -109,7 +110,7 @@ const SignUp = () => {
           <span className="confirm-alert">Passwords do not match</span>
         )}
         <button type="submit">Sign Up</button>
-        <Preloader loading={loading} spinnerSize="50" />
+        <PreloadMessage loading={loading} message="Signing Up" />
       </form>
       {errors && <div className="errors">{errors}</div>}
       {userCreatedAlert && (

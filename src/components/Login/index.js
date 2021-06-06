@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { useHistory } from "react-router-dom";
-import { Preloader } from "react-preloader-tmnt";
+import { PreloadMessage } from "react-preloader-tmnt";
 
 const Login = ({ setIsAuth, isAuth }) => {
   const history = useHistory();
@@ -28,9 +28,10 @@ const Login = ({ setIsAuth, isAuth }) => {
       .then((res) => {
         if (res.ok) {
           return res.json();
-        } else {
-          throw res.json();
         }
+        return res.json().then((data) => {
+          throw new Error(data.message || "Something went wrong");
+        });
       })
       .then((creds) => {
         setIsAuth(true);
@@ -40,11 +41,8 @@ const Login = ({ setIsAuth, isAuth }) => {
         history.push("/game");
       })
       .catch((err) => {
-        console.log(err);
-        err.then((err) => {
-          setLoading(false);
-          setErrors(err.message);
-        });
+        setErrors(err.message);
+        setLoading(false);
       });
   };
 
@@ -70,7 +68,11 @@ const Login = ({ setIsAuth, isAuth }) => {
           id="password"
         />
         <button type="submit">Log in</button>
-        <Preloader loading={loading} spinnerSize="50" />
+        <PreloadMessage
+          loading={loading}
+          message="Logging In"
+          alignIndicator="bottom"
+        />
       </form>
       {errors && <div className="errors">{errors}</div>}
     </div>
