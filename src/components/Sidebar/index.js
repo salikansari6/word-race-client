@@ -39,6 +39,10 @@ const Sidebar = ({ isAuth, setIsAuth, ...props }) => {
     setShowMenu(!showMenu);
   };
 
+  const onMenuItemClicked = () => {
+    setShowMenu(false);
+  };
+
   return (
     // <Router>
     <div className="sidebar">
@@ -59,10 +63,14 @@ const Sidebar = ({ isAuth, setIsAuth, ...props }) => {
         {user && isAuth && <div className="user">Welcome {user.name}</div>}
         <ul className={`sidebar-list`}>
           <li>
-            <Link to="/">Home</Link>
+            <Link onClick={onMenuItemClicked} to="/">
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/signup">Sign Up</Link>
+            <Link onClick={onMenuItemClicked} to="/signup">
+              Sign Up
+            </Link>
           </li>
           <li>
             {" "}
@@ -75,13 +83,23 @@ const Sidebar = ({ isAuth, setIsAuth, ...props }) => {
                 Log Out
               </div>
             ) : (
-              <Link to="/login">Log In</Link>
+              <Link onClick={onMenuItemClicked} to="/login">
+                Log In
+              </Link>
             )}
           </li>
           <li>
-            <Link to="/leaderboard">Leaderboard</Link>
+            <Link onClick={onMenuItemClicked} to="/leaderboard">
+              Leaderboard
+            </Link>
           </li>
-          <li>{isAuth && <Link to="/user-stats">Your stats</Link>}</li>
+          <li>
+            {isAuth && (
+              <Link onClick={onMenuItemClicked} to="/user-stats">
+                Your stats
+              </Link>
+            )}
+          </li>
         </ul>
       </div>
     </div>
