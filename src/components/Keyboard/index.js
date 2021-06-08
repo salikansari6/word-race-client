@@ -13,6 +13,10 @@ const Keyboard = ({ input, setInput, showGameOver }) => {
   }, []);
 
   useEffect(() => {
+    inputRef.current.type = "text";
+  }, [input]);
+
+  useEffect(() => {
     if (screenWidth > 800) {
       setShowKeyboard(true);
     }
@@ -40,7 +44,7 @@ const Keyboard = ({ input, setInput, showGameOver }) => {
   return (
     <div className="keyboard">
       <input
-        type="text"
+        type="password"
         value={input}
         autoCapitalize="none"
         className="keyboard-input"
