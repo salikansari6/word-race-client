@@ -58,10 +58,7 @@ const UserStats = ({ isAuth }) => {
       {id && userStats && <h1>{userStats.name}'s stats</h1>}
       {!id && userStats && <h1>Your stats</h1>}
       <div className="user-stats__body">
-        <Preloader
-          // loaderType="dots"
-          loading={loading}
-        />
+        <Preloader loading={loading} />
         {userStats && (
           <>
             <p>Average Score : {userStats.averageScore.toFixed(2)}</p>
