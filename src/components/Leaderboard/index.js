@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Preloader, Dots, LineProgress } from "react-preloader-tmnt";
+import { LineProgress } from "react-preloader-tmnt";
 import "./Leaderboard.css";
 
 const Leaderboard = () => {
@@ -49,7 +49,6 @@ const Leaderboard = () => {
           })}
         </tbody>
       </table>
-      {/* <Preloader loaderType={Dots} color="#3498db" loading={loading} /> */}
       <LineProgress loading={loading} color="blue" />
     </div>
   );
