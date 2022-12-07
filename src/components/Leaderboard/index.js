@@ -8,7 +8,7 @@ const Leaderboard = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://word-race-backend.herokuapp.com/api/stats")
+    fetch("https://word-race-2si3.onrender.com/api/stats")
       .then((res) => res.json())
       .then((data) => {
         setStats(data);

@@ -11,7 +11,7 @@ const UserStats = ({ isAuth }) => {
   const { id } = useParams();
   useEffect(() => {
     if (id) {
-      fetch(`https://word-race-backend.herokuapp.com/api/stats/${id}`)
+      fetch(`https://word-race-2si3.onrender.com/api/stats/${id}`)
         .then((res) => res.json())
         .then((data) => {
           setUserStats(data);
@@ -19,7 +19,7 @@ const UserStats = ({ isAuth }) => {
         });
     } else {
       fetch(
-        `https://word-race-backend.herokuapp.com/api/stats/${localStorage.getItem(
+        `https://word-race-2si3.onrender.com/api/stats/${localStorage.getItem(
           "userId"
         )}`
       )

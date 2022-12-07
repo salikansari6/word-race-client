@@ -33,7 +33,7 @@ const SignUp = () => {
   const handleSubmit = (e) => {
     setLoading(true);
     e.preventDefault();
-    fetch("https://word-race-backend.herokuapp.com/api/user/register", {
+    fetch("https://word-race-2si3.onrender.com/api/user/register", {
       method: "POST",
       body: JSON.stringify({
         name: form.name,

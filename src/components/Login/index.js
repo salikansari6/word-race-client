@@ -15,7 +15,7 @@ const Login = ({ setIsAuth, isAuth }) => {
   const handleSubmit = (e) => {
     setLoading(true);
     e.preventDefault();
-    fetch("https://word-race-backend.herokuapp.com/api/user/login", {
+    fetch("https://word-race-2si3.onrender.com/api/user/login", {
       method: "POST",
       body: JSON.stringify({
         email: form.email,
